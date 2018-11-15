@@ -52,7 +52,7 @@
     </script>
 
 
-
+    some stuff
     
 
     <?php get_template_part('/components/header/template');?>
