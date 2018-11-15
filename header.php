@@ -54,7 +54,6 @@
 
     some stuff    and them some stuff
     
-    This should not be here...
     
 
     <?php get_template_part('/components/header/template');?>
