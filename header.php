@@ -52,7 +52,7 @@
     </script>
 
 
-    some stuff    and them some stuff  and some other stuff
+    some stuff    and them some stuff
     
     This should not be here...
     
