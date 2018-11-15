@@ -52,8 +52,12 @@
     </script>
 
 
+<<<<<<< HEAD
     some stuff    and them some stuff
     
+=======
+
+>>>>>>> parent of 8969820... header modified
     
 
     <?php get_template_part('/components/header/template');?>
