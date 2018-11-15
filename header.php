@@ -52,7 +52,8 @@
     </script>
 
 
-    some stuff
+    some stuff    and them some stuff
+    
     
 
     <?php get_template_part('/components/header/template');?>
