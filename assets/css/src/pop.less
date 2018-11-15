@@ -1,0 +1,68 @@
+//------------------------------------------------------------
+//------------------------------------------------------------
+// Pop Up Stuff
+//------------------------------------------------------------
+//------------------------------------------------------------
+#expedite-pop-blackout {
+    display: none;
+    z-index: 499;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: @black;
+    opacity: 0.8;
+}
+#expedite-pop-up-message {
+    display: none;
+    z-index: 5000;
+    position: fixed;
+    width: 36%;
+    left: 30%;
+    top: 20%;
+
+    @media(max-width: @screen-sm-max) {
+     width: 70%;
+    left: 15%;
+    top: 10%;
+    }
+
+    padding: 0;
+    background: #FFF;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .expedite-pop-up-message-content {
+        padding: 3rem;
+        text-align: center;
+        .expedite-pop-up-message-heading{
+            margin-top: 0;
+        }
+        .expedite-pop-up-btn{
+          border: 2px solid @main-color;
+          padding: 0.8rem 3rem;
+          display: inline-block;
+          text-decoration: none;
+          margin: 2rem 0 0 0;
+          .transition-duration(0.5s);
+          &:hover{
+              background-color: @main-color;
+              color: @white;
+          }
+        }
+    }
+}
+#expedite-pop-close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background-color: @white;
+    line-height: 60px;
+    text-align: center;
+}

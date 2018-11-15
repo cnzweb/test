@@ -1,0 +1,230 @@
+//------------------------------------------------------------
+//------------------------------------------------------------
+// Gravity Forms Default CSS
+//------------------------------------------------------------
+//------------------------------------------------------------
+.gform_wrapper {
+    @media(min-width: @screen-md-min){float: left; }
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    .gform_body ul {
+        @media(min-width: @screen-md-min){float: left; }
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        li {
+            line-height: 1;
+             @media(min-width: @screen-md-min){float: left; }
+            width: 100%;
+            padding: 0 0%;
+            list-style: none;
+            label {
+                font-family: @heading-font;
+                font-weight: 400;
+                display: block;
+                width: 100%;
+                margin-bottom: .5rem;
+                text-align: left;
+                color: @black;
+            }
+            input,
+            select,
+            textarea {
+                font-family: @body-font;
+                width: 100%;
+                padding: 8px 5px;
+                color: @main-color;
+                border: 1px solid @main-color;
+                background-color: @white;
+            }
+            textarea {
+                height: 7rem;
+            }
+        }
+        li.fifty{
+            width: 49.5%;
+            margin-right: .5%;
+            float: left;
+            @media(max-width: @screen-sm-max) {
+                width: 100%;
+                float: none;
+            }
+        }
+    }
+}
+
+.gform_wrapper:before,.gform_wrapper:after{
+    display: table;
+    content: ' ';
+}
+.gform_wrapper:after{
+    clear: both;
+}
+
+.gform_button {
+    font-family: @heading-font;
+    float: left;
+    margin: 1%;
+    text-align: center;
+    color: #fff;
+
+
+}
+.validation_error,
+.validation_message {
+    font-size: 15px;
+    padding: 5px;
+    border: 1px solid #ffc2c1;
+    background-color: #fde0e0;
+}
+.validation_error {
+    padding: 10px;
+}
+
+.gform_confirmation_message{
+    font-size: 15px;
+    padding: 5px;
+    background-color: #D4EDDA;
+    border: 1px solid #C3E6CB;
+    padding: 10px;
+}
+
+.gform_wrapper ul li.gfield_error input[type="text"] {
+    border: 1px solid #FFC2C1 !important;
+    margin-bottom: 1px;
+}
+.gform_validation_container,
+.gform_wrapper .gform_validation_container,
+body .gform_wrapper .gform_body ul.gform_fields li.gfield.gform_validation_container,
+body .gform_wrapper li.gform_validation_container,
+body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
+    display: none !important;
+    left: -9000px;
+    position: absolute !important;
+}
+//------------------------------------------------------------
+//------------------------------------------------------------
+// Date Picker
+//------------------------------------------------------------
+//------------------------------------------------------------
+   .ui-datepicker {
+       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+       font: 9pt Arial, sans-serif;
+       height: auto;
+       margin: 5px auto 0;
+       width: 216px;
+   }
+   .ui-datepicker a {
+       text-decoration: none;
+   }
+   .ui-datepicker table {
+       border-collapse: collapse;
+       width: 100%;
+   }
+   .ui-datepicker-header {
+       background-color: @main-color;
+       border-color: @main-color;
+       border-style: solid;
+       border-width: 1px 0 0;
+       box-shadow: 0 1px 1px 0 rgba(250, 250, 250, 0.2) inset;
+       color: #E0E0E0;
+       font-weight: bold;
+       line-height: 30px;
+       text-shadow: 1px -1px 0 #000000;
+   }
+   .ui-datepicker-title {
+       text-align: center;
+   }
+   .ui-datepicker-prev,
+   .ui-datepicker-next {
+       background-image: url(../../images/datepicker/arrow.png);
+       background-repeat: no-repeat;
+       cursor: pointer;
+       display: inline-block;
+       height: 30px;
+       line-height: 600%;
+       overflow: hidden;
+       text-align: center;
+       width: 30px;
+   }
+   .ui-datepicker-prev {
+       background-position: center -30px;
+       float: left;
+   }
+   .ui-datepicker-next {
+       background-position: center 0;
+       float: right;
+   }
+   .ui-datepicker thead {
+       background: linear-gradient(to bottom, #F7F7F7 0%, #F1F1F1 100%) repeat scroll 0 0 transparent;
+       border-bottom: 1px solid #BBBBBB;
+   }
+   .ui-datepicker th {
+       color: #666666;
+       font-size: 6pt;
+       padding: 5px 0;
+       text-align: center;
+       text-shadow: 1px 0 0 #FFFFFF;
+       text-transform: uppercase;
+   }
+   .ui-datepicker tbody td {
+       border-right: 1px solid #BBBBBB;
+       border-top: 1px solid #BBBBBB;
+       padding: 0;
+   }
+   .ui-datepicker tbody td:last-child {
+       border-right: 0 none;
+   }
+   .ui-datepicker tbody tr {
+       border-bottom: 1px solid #BBBBBB;
+   }
+   .ui-datepicker tbody tr:last-child {
+       border-bottom: 0 none;
+   }
+   .ui-datepicker td span,
+   .ui-datepicker td a {
+       color: #666666;
+       display: inline-block;
+       font-weight: bold;
+       height: 30px;
+       line-height: 30px;
+       text-align: center;
+       text-shadow: 1px 1px 0 #FFFFFF;
+       width: 30px;
+   }
+   .ui-datepicker-calendar .ui-state-default {
+       background: linear-gradient(to bottom, #EDEDED 0%, #DEDEDE 100%) repeat scroll 0 0 transparent;
+       box-shadow: 1px 1px 0 0 rgba(250, 250, 250, 0.5) inset;
+   }
+   .ui-datepicker-calendar .ui-state-hover {
+       background: none repeat scroll 0 0 #F7F7F7;
+   }
+   .ui-datepicker-calendar .ui-state-active {
+       background: none repeat scroll 0 0 #FFF2AA;
+       border: 1px solid #C19163;
+       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1) inset;
+       color: #666666;
+       margin: -1px;
+       position: relative;
+       text-shadow: 0 1px 0 #FFFFFF;
+   }
+   .ui-datepicker-unselectable .ui-state-default {
+       background: none repeat scroll 0 0 #F4F4F4;
+       color: #B4B3B3;
+   }
+   .ui-datepicker-calendar td:first-child .ui-state-active {
+       margin-left: 0;
+       width: 29px;
+   }
+   .ui-datepicker-calendar td:last-child .ui-state-active {
+       margin-right: 0;
+       width: 29px;
+   }
+   .ui-datepicker-calendar tr:last-child .ui-state-active {
+       height: 29px;
+       margin-bottom: 0;
+   }
+   td.ui-datepicker-unselectable.ui-state-disabled {
+       background-color: #D7D7D7;
+   }

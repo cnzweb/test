@@ -1,0 +1,547 @@
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Base Style
+//------------------------------------------------------------
+//------------------------------------------------------------
+.focus{
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+  .focus-bg{
+   padding: @section-padding;
+   background-color: fade(#efefef,95%);
+  }
+  .focus-intro{
+    margin: 0 auto 3rem auto;
+  }
+  .focus-item{
+    display: block;
+    text-align: center;
+    padding: 0;
+    background-size: cover;
+    background-position: center center;
+    .focus-item-bg{
+     padding: 0;
+    }
+    .focus-item-icon{
+       text-align: center;
+       a{
+          text-decoration: none;
+       }
+       i{
+         font-size: 7rem;
+         color: @main-color;
+         width: 60px;
+         height: 60px;
+         line-height: 56px;
+         display: block;
+         margin: 0 auto;
+       }
+    }
+    .focus-item-image{
+      max-width: 100%;
+      img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+    .focus-item-content{
+       padding: 0.5rem 2rem;
+    }
+    .focus-item-content-icon{
+         display: flex;
+         align-items: center;
+         margin-bottom: 1rem;
+
+        h3{
+         margin: 1rem 0.5rem;
+        }
+        i{
+         display: block;
+         font-size: 2.4rem;
+         color: @main-color;
+         width: 40px;
+         height: 40px;
+         line-height: 40px;
+         text-align: center;
+        }
+    }
+}
+}
+
+
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Image Alt Content = Markup 4
+//------------------------------------------------------------
+//------------------------------------------------------------
+.focus-image-alt-content-bg {
+    [class*="col-"] {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .container {
+         width: 80% !important;
+    }
+    .focus-bg {
+        background-color: @white;
+    }
+    .focus-intro {
+        p {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    }
+    .focus-item {
+       width: 101%;
+        .focus-item-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .focus-item-content {
+            padding: 4rem 3rem;
+            background-color: #efefef;
+            .focus-item-heading {
+                margin-top: 0;
+            }
+        }
+    }
+    @media(min-width: @screen-md-min){
+    [class*="col-"]:nth-child(2),
+    [class*="col-"]:nth-child(4),
+    [class*="col-"]:nth-child(5),
+    [class*="col-"]:nth-child(7) {
+        .focus-item .focus-item-content {
+            background-color: @main-color;
+            color: @white;
+            .focus-item-heading {
+                color: @white;
+            }
+            .focus-item-btn{
+                color: @white;
+            }
+        }
+    }
+    }
+     @media(max-width: @screen-sm-max) {
+     [class*="col-"]:nth-child(odd) {
+        .focus-item .focus-item-content {
+            background-color: @main-color;
+            color: @white;
+            .focus-item-heading {
+                color: @white;
+            }
+            .focus-item-btn{
+                color: @white;
+            }
+        }
+    }
+
+     }
+
+
+
+}
+
+
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Item Focus Item Side = Markup 2
+//------------------------------------------------------------
+//------------------------------------------------------------
+.icon-side{
+    .focus-item-bg{
+         display: flex;
+
+         margin-bottom: 1rem;
+        }
+    .focus-item-icon{
+     padding: 1rem;
+    }
+    .focus-item-content{
+     padding: 1rem;
+     text-align: left;
+     h3{
+        margin: 1rem 0;
+     }
+    }
+}
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Item Focus Item Side = Markup
+//------------------------------------------------------------
+//------------------------------------------------------------
+.icon-heading-side{
+   .focus-item-content{
+     padding: 1rem;
+     text-align: left;
+    }
+}
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Item Icon Border
+//------------------------------------------------------------
+//------------------------------------------------------------
+.focus-item-icon-border{
+
+    .focus-bg{
+        background-color: #ccc;
+    }
+    .focus-item .focus-item-icon{
+
+       i{
+        border: 1px solid @main-color;
+        background-color: @white;
+        width: 100px;
+        height: 100px;
+        line-height: 96px;
+       }
+    }
+    .focus-item-content-icon{
+       i{
+        border: 1px solid @main-color;
+        background-color: @white;
+        }
+    }
+}
+//------------------------------------------------------------
+//------------------------------------------------------------
+//|* Focus Item Border Round
+//------------------------------------------------------------
+//------------------------------------------------------------
+.focus-item-icon-border--round{
+    .focus-bg{
+        background-color: #efefef;
+    }
+    .focus-item  .focus-item-icon{
+       i{
+        border: 1px solid @main-color;
+        .rounded(50%);
+        font-size: 4rem;
+        width: 90px;
+        height: 90px;
+        line-height: 88px;
+       }
+    }
+    .focus-item-content-icon{
+       i{
+         border: 1px solid @main-color;
+         .rounded(50%);
+          font-size: 2rem;
+        }
+    }
+}
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Item Icon Background
+//------------------------------------------------------------
+//------------------------------------------------------------
+.focus-item-icon-background{
+    .focus-bg{
+         background-color: #ccc;
+    }
+    .focus-item .focus-item-icon{
+       i{
+        background-color: @main-color;
+        color: @white;
+        .rounded(50%);
+        font-size: 3rem;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+       }
+    }
+     .focus-item .focus-item-content-icon{
+       i{
+        background-color: @main-color;
+        color: @white;
+         .rounded(50%);
+          font-size: 2rem;
+        }
+    }
+}
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Item Border
+//------------------------------------------------------------
+//------------------------------------------------------------
+.focus-item--border{
+    .focus-bg{
+        background-color: #efefef;
+         padding: @section-padding;
+    }
+    .focus-item{
+         border: 1px solid @main-color;
+         padding: 3rem 2rem;
+    }
+}
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Item Border Icon Square
+//------------------------------------------------------------
+//------------------------------------------------------------
+.focus-item--border-icon--square{
+    .focus-bg{
+        background-color: #ccc;
+    }
+    .focus-item{
+         border: 1px solid @main-color;
+         background-color: @white;
+         padding: 3rem 2rem;
+    }
+    .focus-item  .focus-item-icon{
+       i{
+        background-color: @main-color;
+        color: @white;
+        font-size: 3rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+       }
+    }
+}
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Item Border Icon Round
+//------------------------------------------------------------
+//------------------------------------------------------------
+.focus-item--border-icon--round{
+    .focus-bg{
+        background-color: #efefef;
+    }
+    .focus-item{
+         border: 1px solid @main-color;
+         background-color: @white;
+         padding: 5rem 2rem;
+         margin-top: 50px;
+         position: relative;
+    }
+    .focus-item  .focus-item-icon{
+       position: absolute;
+       top: -45px;
+       left: 50%;
+       margin-left: -40px;
+       i{
+        background-color: @main-color;
+        color: @white;
+        .rounded(50%);
+        font-size: 3rem;
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+       }
+    }
+}
+
+.focus-item--border-icon--round{
+  .icon-side{
+     .focus-item-icon{
+       left: 1rem;
+       margin-left: 0px;
+     }
+  }
+}
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Item Shadow
+//------------------------------------------------------------
+//------------------------------------------------------------
+.focus-item--shadow{
+    .focus-bg{
+        background-color: fade(#000,85%);
+         padding: @section-padding;
+         color: @white;
+    }
+    display: block;
+    text-align: center;
+
+    .focus-item{
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        background-color: @white;
+        color: @black;
+        padding: 3rem 2rem;
+    }
+}
+
+//------------------------------------------------------------
+//------------------------------------------------------------
+// Focus Item Image Round
+//------------------------------------------------------------
+//------------------------------------------------------------
+ .focus-item--image--round{
+    .focus-bg{
+        background-color: darken(fade(#1E5420,95%),20%);
+        color: @white;
+    }
+    .focus-item-image{
+      width: 100%;
+      text-align: center;
+      img{
+        max-width: 100%;
+        width: 180px;
+        height: 180px;
+        display: block;
+        margin: 0 auto;
+        float: none;
+        border-radius: 50%;
+      }
+    }
+}
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Item Shadow
+//------------------------------------------------------------
+//------------------------------------------------------------
+.focus-item-image-shadow{
+    .focus-bg{
+        background-color: #ccc;
+        padding: @section-padding;
+
+    }
+    .focus-item{
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        background-color: @white;
+        color: @black;
+        padding: 0rem 0rem;
+    }
+    .focus-item-content{
+       padding: 2rem;
+    }
+}
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Image + Icon
+//------------------------------------------------------------
+//------------------------------------------------------------
+.focus-item-image-icon{
+    .focus-bg{
+        background-color: #ccc;
+        padding: @section-padding;
+    }
+     .focus-item  .focus-item-icon{
+       margin-top: -45px;
+       text-align: center;
+       a{
+          text-decoration: none;
+       }
+       i{
+         font-size: 4rem;
+         background-color: @main-color;
+         color: @white;
+         width: 90px;
+         height: 90px;
+         line-height: 90px;
+         display: block;
+         margin: 0 auto;
+         position: relative;
+         z-index: 10;
+       }
+    }
+}
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Image + Icon Both Rounded
+//------------------------------------------------------------
+//------------------------------------------------------------
+.focus-item-image--rounded-icon--round{
+    .focus-bg{
+        background-color: #efefef;
+       padding: @section-padding;
+    }
+    .focus-item-image{
+        img{
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        float: none;
+        border-radius: 5px;
+      }
+    }
+    .focus-item   .focus-item-icon{
+       margin-top: -45px;
+       text-align: center;
+       a{
+          text-decoration: none;
+       }
+       i{
+         font-size: 4rem;
+         background-color: @main-color;
+         color: @white;
+         .rounded(50%);
+         border: 4px solid @white;
+         width: 90px;
+         height: 90px;
+         line-height: 80px;
+         display: block;
+         margin: 0 auto;
+         position: relative;
+         z-index: 10;
+       }
+    }
+}
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Image Background
+//------------------------------------------------------------
+//------------------------------------------------------------
+.focus-item-background{
+    .focus-bg{
+        background-color: #efefef;
+        padding: 7rem 0;
+    }
+    .focus-item-bg{
+     background-color: fade(@second-color, 80%);
+     padding: @section-padding;
+     color: @white;
+    }
+    .focus-item-content{
+       padding: 0.5rem 0;
+       a{
+        color: @main-color;
+        text-decoration: none;
+        display: block;
+       }
+       a:hover{
+        text-decoration: underline;
+       }
+    }
+}
+//------------------------------------------------------------
+//------------------------------------------------------------
+//Focus Image Background
+//------------------------------------------------------------
+//------------------------------------------------------------
+.focus-item-background--full-width{
+    [class*="col-"]{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    }
+    .container{
+        width: 100% !important;
+    }
+    .focus-bg{
+        background-color: #000;
+        padding: @section-padding;
+        color: @white;
+    }
+    .focus-item-bg{
+     background-color: fade(@black, 80%);
+     padding: 7rem 3rem;
+     color: @white;
+    }
+    .focus-item-content{
+       padding: 0.5rem 6rem;
+       a{
+        color: @main-color;
+        text-decoration: none;
+        display: block;
+       }
+       a:hover{
+        text-decoration: underline;
+       }
+    }
+}

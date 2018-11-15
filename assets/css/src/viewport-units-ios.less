@@ -1,0 +1,76 @@
+/**
+ * Fix for vw, vh, vmin, vmax on iOS 7.
+ * http://caniuse.com/#feat=viewport-units
+ *
+ * This fix works by replacing viewport units with px values on known screen sizes.
+ *
+ * iPhone 6 and 6 Plus cannot run iOS 7, so are not targeted by this fix.
+ * Target devices running iOS 8+ will incidentally execute the media query,
+ * but this will still produce the expected result; so this is not a problem.
+ *
+ * As an example, replace:
+ *
+ *   height: 50vh;
+ *   font-size: 5vmin;
+ *
+ * with:
+ *
+ *   .viewport-unit(height, 50vh);
+ *   .viewport-unit(font-size, 5vmin);
+ */
+
+@device-ipad:    768px 1024px; // iPad (all versions)
+@device-iphone4: 320px 480px;  // iPhone 4
+@device-iphone5: 320px 568px;  // iPhone 5, 5C, 5S
+@devices: @device-ipad @device-iphone4 @device-iphone5;
+
+.viewport-unit(@property, @value) {
+  @{property}: @value;
+  
+  .viewport-unit-devices(@property, @value, @devices);
+}
+
+.viewport-unit-devices(@property, @value, @devices, @i: 1) when (@i <= length(@devices)) {
+  @device: extract(@devices, @i);
+  
+  @device-width: extract(@device, 1);
+  @device-height: extract(@device, 2);
+
+  @unit: get-unit(@value);
+  @percent: (@value / unit(1, @unit));
+
+  @percent-width: (@device-width * @percent / 100);
+  @percent-height: (@device-height * @percent / 100);
+
+  @media only screen
+    and (-webkit-min-device-pixel-ratio: 1)
+    and (device-width: @device-width)
+    and (device-height: @device-height)
+  {
+  	.viewport-unit-device-medias(@property, @value, @unit,  @percent-width,  @percent-height);
+  }
+  
+  .viewport-unit-devices(@property, @value, @devices, (@i + 1));
+}
+.viewport-unit-device-medias(@property, @value, vw,  @percent-width,  @percent-height) {
+  @media (orientation: portrait) {
+    @{property}: @percent-width;
+  }
+  @media (orientation: landscape) {
+    @{property}: @percent-height;
+  }
+}
+.viewport-unit-device-medias(@property, @value, vh,  @percent-width,  @percent-height) {
+  @media (orientation: portrait) {
+    @{property}: @percent-height;
+  }
+  @media (orientation: landscape) {
+    @{property}: @percent-width;
+  }
+}
+.viewport-unit-device-medias(@property, @value, vmin,  @percent-width,  @percent-height) {
+  @{property}: @percent-width;
+}
+.viewport-unit-device-medias(@property, @value, vmax,  @percent-width,  @percent-height) {
+  @{property}: @percent-height;
+}
