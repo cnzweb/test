@@ -51,7 +51,7 @@
     }
     </script>
 
-    I am going to add some stuff here....
+    This should be clean....
     
 
     <?php get_template_part('/components/header/template');?>
